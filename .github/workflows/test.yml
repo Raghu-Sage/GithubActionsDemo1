@@ -6,11 +6,11 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install node
+      - name: Install nodeJS
         uses: actions/setup-node@v3
         with: 
           node-version: v20.16.0
       - name: Install dependencies
-        uses: npm ci
-      - name: Run testss
-        uses: npm test
+        run: npm ci
+      - name: Run tests
+        run: npm test
